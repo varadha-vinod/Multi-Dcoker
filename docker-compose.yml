@@ -16,6 +16,7 @@ services:
      build:
         dockerfile: Dockerfile.dev
         context: ./nginx
+     image: vinod1033161/nginx
      ports:
          - "3050:80"
 
@@ -23,6 +24,7 @@ services:
      build:
           dockerfile: Dockerfile.dev
           context: ./server
+     image: vinod1033161/api
      volumes:
          - /app/node_modules
 
@@ -46,6 +48,7 @@ services:
      build:
            dockerfile: Dockerfile.dev
            context: ./client
+     image: vinod1033161/client
 
      volumes:
         - /app/node_modules
@@ -55,6 +58,7 @@ services:
      build:
            dockerfile: Dockerfile.dev
            context: ./worker
+     image: vinod1033161/worker
 
      volumes:
         - /app/node_modules
